@@ -1,0 +1,44 @@
+.contact
+	gap: 40pt
+	
+	.col:nth-child(1)
+		width: 60%
+	.col:nth-child(2)
+		width: 45%
+	
+	.col
+		p
+			margin: 0 !important
+	
+	form
+		margin-top: 0.93em !important
+		max-height: 100vh
+		display: flex
+		gap: 12pt
+		flex-wrap: wrap
+		margin-top: 1.5em
+		transition-duration: 1s !important
+		
+		&.hideForm
+			max-height: 0
+			filter: blur(8px)
+			opacity: 0
+			margin-top: 0.8em
+			overflow: hidden
+		
+@media (max-width: 991px)
+	.contact
+		gap: 20pt
+		
+		form
+			gap: 6pt
+			margin-top: 0.2em
+		
+		.col
+			width: 100% !important
+			
+		input
+			width: 30%
+		
+		textarea
+			height: 9ch

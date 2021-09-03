@@ -1,0 +1,62 @@
+.hero
+	padding-bottom: 130pt
+	position: relative
+	overflow: hidden
+	
+	.nav
+		position: absolute
+		inset: 0
+		left: 70%
+		top: 30%
+		
+		h6
+			font-size: 1em
+			text-shadow: 6px 6px 0px #000000bb
+			color: #f92c69
+			font-family: 'Lobster', cursive !important
+			transition-duration: 400ms
+			&:hover
+				//letter-spacing: 0.05em
+				transform: translateX(-2px) translateY(-2px) skewX(-10deg)
+				text-shadow: 8px 8px 0px #00000033
+				filter: drop-shadow(0px 0px 8px #f92c6966) !important
+				transition-duration: 100ms
+	
+	p
+		font-size: 0.8rem
+		line-height: 1.8em
+		letter-spacing: 0.9px
+		max-width: 70ch
+		text-align: left
+		opacity: 0.3
+	
+	h1, h2, span, p
+		pointer-events: none
+		
+		
+	h1, h1 span
+		font-family: 'Lobster', cursive
+	
+	h1
+		margin-top: auto
+		
+	h2
+		color: #0bd497
+		filter: drop-shadow(3px 3px 0px #f92c6988)
+		font-family: 'Train One', cursive
+		
+		&::selection
+			background: transparent
+			color: #f92c69
+			text-shadow: 3px 3px 0px #0bd497
+	
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: radial-gradient(#13181c 20%, transparent 40%)
+		opacity: 0
+		z-index: -1

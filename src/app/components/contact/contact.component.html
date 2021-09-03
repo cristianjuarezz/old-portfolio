@@ -1,0 +1,25 @@
+<div class="handle">
+	<section class="row contact colmob">
+		<div class="col">
+			<h3>Contact</h3>
+			<h6>Let's talk about business</h6>
+			<!-- TODO: Update below -->
+			<p><i>I'm seeking out opportunities to collaborate with companies, agencies, individuals. I want to bring my collective design experience and logical capacity to the table where we can work together to solve real business-problems in a way that optimizes all of our respective experience and knowledge.</i></p>
+		</div>
+		<div class="col">
+			<h3>Form</h3>
+			<h6></h6>
+			<form [ngClass]="{'hideForm': state!=0}" #userForm ="ngForm" class="spb" spellcheck="false" autocomplete="off">
+				<input type="text" name="name" placeholder="Name" ngModel required>
+				<input type="email" name="email" placeholder="Email" ngModel required>
+				<input type="text" name="subject" placeholder="Subject" ngModel required>
+				<textarea name="message" rows="8" cols="80" autocomplete="off" ngModel [required]="true"></textarea>
+				<button *ngIf="state==0" (click)="sendMail(userForm)" type="submit" name="button">Send</button>
+				<p *ngIf="missing && state==0">Some fields are missing</p>
+			</form>
+			
+			<p *ngIf="state==2">Message sent, thankyou for contacting me!</p>
+			<p *ngIf="state==-1">Something went wrong.</p>
+		</div>
+	</section>
+</div>

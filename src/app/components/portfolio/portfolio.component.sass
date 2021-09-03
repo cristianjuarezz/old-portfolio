@@ -1,0 +1,396 @@
+.coolblur
+	backdrop-filter: blur(3px) hue-rotate(180deg)
+	
+[data-aos="cardopen"] 
+	transform: rotateY(-60deg)
+	opacity: 0
+	pointer-events: none
+	transition-property: transform, opacity, pointer-events, transition-delay
+  
+	&.aos-animate
+		transform: rotateY(-30deg)
+		opacity: 1
+		pointer-events: all
+		transition-delay: 0 !important
+			
+
+[data-aos="flip-rightx"] 
+	transform: rotateY(20deg)
+	opacity: 0 !important
+	transition-property: transform, opacity  !important
+  
+	&.aos-animate
+		transform: rotateY(0deg)
+		opacity: 1 !important
+		
+
+[data-aos="fade-inx"] 
+	opacity: 0
+  
+	&.aos-animate
+		opacity: 0.7 !important
+
+.persp
+	perspective: 600px
+
+.cardr
+	pointer-events: none
+	min-width: 35%
+	background: #ffffff06
+	margin-top: 20pt
+	backdrop-filter: blur(8px) hue-rotate(45deg)
+	margin-top: -15% !important
+	margin-bottom: -5%
+	padding: 20pt
+	transform-origin: right
+	text-shadow: 10px 6px 3px #00000055 !important
+	transition-duration: 200ms
+	transform: rotateY(-60deg)
+	opacity: 0
+	pointer-events: none
+	transition-property: transform, opacity
+	
+	&.f
+		transition-delay: 600ms
+		//animation: cardinit 0.1s 3s ease forwards
+	
+	&:hover
+		transform: rotateY(-15deg)
+	
+	span
+		margin-top: 16pt
+		font-size: 0.3em
+		opacity: 0.5
+		font-weight: lighter
+		cursor: default
+	
+	ul
+		margin-top: 8pt
+		flex-wrap: wrap
+		justify-content: space-evenly
+		gap: 10pt
+		
+		li
+			width: fit-content
+			font-size: 0.3em
+
+.grid
+	flex-wrap: wrap
+	margin-top: 10pt
+	gap: 6pt
+	//overflow: scroll
+	
+	.item
+		background: #10101000
+		border-radius: 12pt
+		padding: 12pt
+		transition-duration: 400ms !important
+		opacity: 0
+		//animation: iteminit 1s 0.5s ease forwards
+		
+		a
+			cursor: default
+		
+		h4
+			cursor: pointer
+			width: fit-content
+			font-size: 0.35em
+			background: linear-gradient(45deg, #f92c69 0%, #ffffff 0%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+		
+		p
+			text-align: left
+			line-height: 1.2
+			font-size: 0.25em
+			cursor: default
+			width: 40ch
+		
+		&:hover
+			position: relative
+			inset: 0
+			transform: scale(1.1)
+			z-index: 2
+			
+			h4
+				background: linear-gradient(45deg, #f92c69 69%, #0bd497 70%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+.games
+	opacity: 0
+	
+.card
+	min-width: 65%
+	margin-top: 20pt
+	
+	.app
+		background: #ff0080
+		width: fit-content
+		height: fit-content
+		overflow: hidden
+		border-radius: 6pt
+		min-width: 140pt
+		width: 140pt
+		height: 140pt
+		
+		img
+			object-fit: contain
+			width: 100%
+			height: 100%
+			
+	.coolblur
+		padding: 12pt
+		margin-left: 12pt
+		
+		i
+			cursor: default
+		
+		p
+			margin-top: 10pt
+			font-size: 0.25em
+			text-align: left
+		
+		a
+			width: fit-content
+			font-size: 0.67em
+			font-weight: bold
+			transition-duration: 200ms
+			
+			&:hover
+				text-shadow: -2px -2px 0px white
+				background: linear-gradient(45deg, #f92c69 69%, #0bd497 70%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+
+.music
+	border-radius: 30pt
+	width: fit-content
+	min-width: auto
+	padding-right: 12pt
+	
+	.col
+		padding: 0
+		margin-left: 0
+		p
+			font-size: 0.3em
+			margin: auto 0
+			text-align: left
+			
+	.app
+		background: #ff0080
+		position: relative
+		background: black
+		min-width: 60pt
+		width: 60pt
+		height: 60pt
+		border-radius: 50%
+		margin: 0
+		margin-right: 12pt
+		padding: 6pt
+	
+.igpostlist
+	display: flex
+	flex-wrap: wrap
+	margin-top: 20pt
+	grid-gap: 5pt
+		
+	.igpost
+		height: 110pt
+		aspect-ratio: 1/1
+		overflow: hidden
+		position: relative
+		transition-duration: 200ms
+		
+		.meta
+			position: absolute
+			inset: 0
+			padding: 6pt
+			display: flex
+			flex-direction: column
+			opacity: 0
+			transition-duration: 200ms
+			pointer-events: none
+			
+			h6, p
+				text-shadow: 0px 0px 4px black
+			
+			h6
+				font-size: 0.2em
+				margin-top: auto
+			p
+				margin: 0
+		
+		img
+			filter: grayscale(0.2) contrast(0.9)
+			position: relative
+			object-fit: cover
+			width: 100%
+			height: 100%
+			transition-duration: 200ms
+		
+		&:hover
+			filter: drop-shadow(0px 0px 8px black)
+			transform: scale(1.1) skew(-0deg, -0deg)
+			z-index: 1
+			
+			img
+				//filter: blur(8px)
+			
+			.meta
+				opacity: 1
+
+.gapper
+	gap: 30pt
+	
+.itemshow
+	height: 70vh
+	border-radius: 12px
+	position: relative
+	overflow: hidden
+	transition-duration: 300ms
+	
+	//&::before
+		content: ''
+		position: absolute
+		inset: 0
+		background: linear-gradient(45deg, #f92c69 69.8%, #0bd497 70%)
+		//mask: url('.padd')
+	
+	.padd
+		background: #222222
+		padding: 12pt
+		padding-top: 30pt
+		position: absolute
+		inset: 0
+		top: 60%
+		transition-duration: 300ms
+		
+		p
+			font-size: 0.26em
+			opacity: 0
+			transition-duration: 300ms
+			
+		.row a
+			position: absolute
+			inset: 12pt
+			top: auto
+			bottom: 40pt
+			opacity: 0
+			text-shadow: 4px 4px 2px black
+		
+		span
+			font-size: 0.3em
+			font-weight: lighter
+		
+		a
+			width: fit-content
+			font-size: 0.7em
+			font-weight: bold
+			transition-duration: 300ms
+			
+			&::before
+				margin-bottom: 4pt !important
+				
+			&::after
+				margin-top: 4pt !important
+			
+			&::before,&:after
+				content: ''
+				backface-visibility: hidden
+				height: 1px
+				background: white
+				bottom: 0px
+				display: block
+				margin: 0 auto
+				position: relative
+				transition: all 280ms ease-in-out
+				width: 0
+			
+			&:hover:before,&:hover:after
+				backface-visibility: hidden
+				border-color: #fff
+				transition: width 350ms ease-in-out
+				width: 100%
+		
+		&::after
+			content: ""
+			background: #222222
+			width: 130%
+			height: 50pt
+			position: absolute
+			inset: 0
+			top: -10%
+			transform: rotate(5deg) translateX(-10%)
+			transition-duration: 300ms
+					
+	.thumb
+		background: #0bd497
+		border-top-left-radius: 12pt
+		border-top-right-radius: 12pt
+		height: 60%
+		transition-duration: 300ms
+		filter: opacity(1) saturate(0.8) contrast(0.8)
+		
+		img
+			transition-duration: 150ms
+		
+	&:hover
+		p
+			opacity: 1 !important
+			
+		.row a
+			opacity: 1 !important
+			
+		a
+			margin-bottom: 20pt
+			
+		.padd
+			background: #f92c69
+			top: 0%
+			&::after
+				background: #f92c69
+			
+		.thumb
+			height: 80%
+			
+			img
+				opacity: 0
+		
+@keyframes cardinit
+	to
+		transition-delay: 0 !important
+		background: red
+
+@keyframes iteminit
+	from
+		transform: scale(0.8)
+		opacity: 0
+		
+	to
+		transform: scale(1)
+		opacity: 1
+
+//@media (max-width: 1230px)
+	.persp
+		&.colmob
+			flex-direction: column
+			
+@media (max-width: 1300px)
+	[data-aos="cardopen"] 
+		
+		&.aos-animate
+			transform: rotateY(0deg)
+			opacity: 1
+	
+	.cardr
+		margin-top: 40pt !important
+	
+	.games
+		.app
+			width: 100% !important
+			height: 50pt !important
+			margin-bottom: 6pt
+			
+	.igpostlist
+		.igpost
+			height: 68pt
