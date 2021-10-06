@@ -15,12 +15,12 @@
 			
 
 [data-aos="flip-rightx"] 
-	transform: rotateY(20deg)
+	transform: rotateX(10deg) rotateZ(-10deg) rotateY(20deg)
 	opacity: 0 !important
 	transition-property: transform, opacity  !important
   
 	&.aos-animate
-		transform: rotateY(0deg)
+		transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg)
 		opacity: 1 !important
 		
 
@@ -36,6 +36,7 @@
 .cardr
 	pointer-events: none
 	min-width: 35%
+	margin-left: auto
 	background: #ffffff06
 	margin-top: 20pt
 	backdrop-filter: blur(8px) hue-rotate(45deg)
@@ -49,11 +50,15 @@
 	opacity: 0
 	pointer-events: none
 	transition-property: transform, opacity
+	height: fit-content
+	padding-bottom: 30pt
 	
 	&.f
+		margin-left: auto
 		transition-delay: 600ms
+		opacity: 0
 		//animation: cardinit 0.1s 3s ease forwards
-	
+		
 	&:hover
 		transform: rotateY(-15deg)
 	
@@ -86,6 +91,7 @@
 		padding: 12pt
 		transition-duration: 400ms !important
 		opacity: 0
+		min-width: 140pt
 		//animation: iteminit 1s 0.5s ease forwards
 		
 		a

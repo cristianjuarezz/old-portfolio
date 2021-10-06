@@ -5,6 +5,10 @@
 			<h6>Let's talk about business</h6>
 			<!-- TODO: Update below -->
 			<p><i>I'm seeking out opportunities to collaborate with companies, agencies, individuals. I want to bring my collective design experience and logical capacity to the table where we can work together to solve real business-problems in a way that optimizes all of our respective experience and knowledge.</i></p>
+			<a class="cv" href="../../assets/JUAREZ.CRISTIAN-Frontend.DEVELOPER.pdf" target="_blank">Download CV</a>
+			<a class="cv" href="../../assets/JUAREZ.CRISTIAN-Frontend.DEVELOPER.pdf" target="_blank">Descargar CV</a>
+			<!--div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="cristian-juarez-dev" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ar.linkedin.com/in/cristian-juarez-dev?trk=profile-badge">Cristian Juarez</a></div-->
+            <!--script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script-->
 		</div>
 		<div class="col">
 			<h3>Form</h3>
@@ -17,7 +21,6 @@
 				<button *ngIf="state==0" (click)="sendMail(userForm)" type="submit" name="button">Send</button>
 				<p *ngIf="missing && state==0">Some fields are missing</p>
 			</form>
-			
 			<p *ngIf="state==2">Message sent, thankyou for contacting me!</p>
 			<p *ngIf="state==-1">Something went wrong.</p>
 		</div>

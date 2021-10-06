@@ -27,12 +27,19 @@ export class PortfolioComponent implements OnInit{
   	  this.ghServ.getRepos().subscribe(
   		  res=>{
  			  this.projs=res;
+			  let myTag = this.el.nativeElement.querySelector("#x");
+			  myTag.classList.remove('f');
+			  setTimeout(() => 
+				{
+				    myTag.classList.remove('dn');
+				},
+				200);
   		  },
   		  err=>{
   			  console.log('OOPS!: ' + err);			  
   		  }
   	  );
-	  this.igServ.getMedia().subscribe(
+	  /*this.igServ.getMedia().subscribe(
   		  res=>{
   			  this.igposts=res.data;
   		  },
@@ -40,12 +47,6 @@ export class PortfolioComponent implements OnInit{
   			  console.log('OOPS!: ');
 			  console.log(err);
   		  }
-  	  );
-	  setTimeout(() => 
-		{
-			let myTag = this.el.nativeElement.querySelector("#x");
-		    myTag.classList.remove('f'); 
-		},
-		1000);
+  	  );*/
     }
 }
